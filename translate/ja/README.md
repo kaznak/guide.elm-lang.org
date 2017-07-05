@@ -16,11 +16,13 @@ This is Japanese translated version of commit 5e58bb7cad13f09ae1c849456631810690
 
 %訳注% : If you are on the fence : Elm の採用を迷っている?
 
-## A Quick Sample
+## クイックサンプル
 
-Of course *I* think Elm is good, so look for yourself.
+当然、*私*はエルムが良いと思うので、あなたにもそう思ってもらいたいです。
 
-Here is [a simple counter](http://elm-lang.org/examples/buttons). If you look at the code, it just lets you increment and decrement the counter:
+%訳注% : Of course *I* think Elm is good, so look for yourself. 
+
+ここに[簡単なカウンタ](http://elm-lang.org/examples/buttons)の例があります。コードをみれば、それは単純にカウンタをインクリメント、デクリメント出来るようにしているものだと分かるでしょう。
 
 ```elm
 import Html exposing (Html, button, div, text)
@@ -47,8 +49,7 @@ view model =
     ]
 ```
 
-Notice that the `update` and `view` are entirely decoupled. You describe your HTML in a declarative way and Elm takes care of messing with the DOM.
-
+`update`と` view`は完全に分離されています。 あなたは HTML を宣言的な方法で記述し、 Elm はごちゃごちゃした DOM の操作の面倒を見ます。
 
 ## Why a *functional* language?
 
