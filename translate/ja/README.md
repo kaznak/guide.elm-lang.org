@@ -51,15 +51,15 @@ view model =
 
 `update`と` view`は完全に分離されています。 あなたは HTML を宣言的な方法で記述し、 Elm はごちゃごちゃした DOM の操作の面倒を見ます。
 
-## Why a *functional* language?
+## なぜ*関数型*言語か?
 
-Forget what you have heard about functional programming. Fancy words, weird ideas, bad tooling. Barf. Elm is about:
+あなたが関数型プログラミングについて聞いた事は忘れて下さい。変わった言葉、奇妙なアイディア、ひどいツール。うげえ。 Elm はこういったものです:
 
-  - No runtime errors in practice. No `null`. No `undefined` is not a function.
-  - Friendly error messages that help you add features more quickly.
-  - Well-architected code that *stays* well-architected as your app grows.
-  - Automatically enforced semantic versioning for all Elm packages.
+  - 実際に使っていてランタイムエラーは発生しません。 `null` は存在しません。 `undefined` は関数ではありません。
+  - 素早く機能を追加するのを助けてくれる便利なエラーメッセージ
+  - 上手く構成されたコード、アプリケーションが成長しても上手い構成が*維持*されるような
+  - 全ての Elm パッケージに自動的に強制される意味論的バージョニング
+  
+JS ライブラリの組み合わせはあなたにこれを与えることはできませんが、それはエルムではすべて自由で簡単にえられます。これらの素晴らしいことは*唯一*可能ですが、それは、 Elm は型付き関数型言語の40年以上の成果の上に構築されているからです。 Elm は関数型言語ですが、それは実際のメリットがこのガイドを読むのに費やす時間の価値があるからです。
 
-No combination of JS libraries can ever give you this, yet it is all free and easy in Elm. Now these nice things are *only* possible because Elm builds upon 40+ years of work on typed functional languages. So Elm is a functional language because the practical benefits are worth the couple hours you'll spend reading this guide.
-
-I have put a huge emphasis on making Elm easy to learn and use, so all I ask is that you give Elm a shot and see what you think. I hope you will be pleasantly surprised!
+私は Elm を学びやすく使いやすくすることに重点を置いています。だから私があなたに求めるのは、 Elm をちょっと試してみて、どう考えるか見る事です。私はあなたが嬉しい驚きを得る事を願っています。
