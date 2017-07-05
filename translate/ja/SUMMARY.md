@@ -25,7 +25,7 @@ This is Japanese translated version of commit 5e58bb7cad13f09ae1c849456631810690
    * [Maybe](error_handling/maybe.md)
    * [Result](error_handling/result.md)
    * [Task](error_handling/task.md)
-* [インターオペレーション](interop/README.md)
+* [相互運用](interop/README.md)
    * [JSON](interop/json.md)
    * [JavaScript](interop/javascript.md)
 * [Elm アーキテクチャのスケール](reuse/README.md)
