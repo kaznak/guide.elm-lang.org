@@ -2,3 +2,7 @@ This is word list for Japanese translated version of commit 5e58bb7cad13f09ae1c8
 
 # 単語帳
 
+## Interop
+
+相互運用
+
