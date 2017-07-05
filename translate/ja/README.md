@@ -1,19 +1,20 @@
 This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
 
-# An Introduction to Elm
+# Elm の紹介
 
-**Elm is a functional language that compiles to JavaScript.** It competes with projects like React as a tool for creating websites and web apps. Elm has a very strong emphasis on simplicity, ease-of-use, and quality tooling.
+**Elm は JavaScript へとコンパイルされる関数型言語です。**ウェブサイトやウェブアプリケーションを作成するためのツールとして React のようなプロジェクトと競合します。  Elm はシンプルさ、使いやすさ、品質の高いツールを非常に重視しています。
 
-This guide will:
+このガイドは以下のようなものです。
 
-  - Teach you the fundamentals of programming in Elm.
-  - Show you how to make interactive apps with *The Elm Architecture*.
-  - Emphasize the principles and patterns that generalize to programming in any language.
+  - Elm でのプログラミングの基礎を教えます。
+  - *Elm アーキテクチャ*に基づいて、どのようにインタラクティブなアプリケーションを作るか、説明します。
+  - いかなる言語でのプログラミングにとっても一般的な原則とパターンを強調します。
 
-By the end I hope you will not only be able to create great web apps in Elm, but also understand the core ideas and patterns that make Elm nice to use.
+読み終えたときには、 Elm で素晴らしい Web アプリケーションを作成できるようになるだけでなく、 Elm ヲ使いやすくしている、基本的なアイデアやパターンを理解していただければ幸いです。
 
-If you are on the fence, I can safely guarantee that if you give Elm a shot and actually make a project in it, you will end up writing better JavaScript and React code. The ideas transfer pretty easily!
+どうしようか迷っているばあいは、 Elm をちょっと試して、実際にプロジェクトをつくれば、より良い JavaScript とリアクションコードを書き上げることができるでしょう。アイディアが簡単に実現出来ますよ!
 
+%訳注% : If you are on the fence : Elm の採用を迷っている?
 
 ## A Quick Sample
 
