@@ -1,3 +1,5 @@
+This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
+
 > **Note:** If you do not want to install yet, you can follow along in this guide with the [online editor](http://elm-lang.org/try) and the [online REPL](http://elmrepl.cuberoot.in/).
 
 
