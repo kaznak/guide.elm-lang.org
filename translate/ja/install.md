@@ -1,34 +1,32 @@
 This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
 
-> **Note:** If you do not want to install yet, you can follow along in this guide with the [online editor](http://elm-lang.org/try) and the [online REPL](http://elmrepl.cuberoot.in/).
+> **情報:** まだインストールしたくない場合は、このガイドの[オンラインエディタ](http://elm-lang.org/try)と[オンラインREPL](http://elmrepl.cuberoot.in/)を参照してください。
 
+# インストール
 
-# Install
-
-  * Mac &mdash; [installer][mac]
-  * Windows &mdash; [installer][win]
-  * Anywhere &mdash; [npm installer][npm] or [build from source][build]
+  * Mac &mdash; [インストーラ][mac]
+  * Windows &mdash; [インストーラ][win]
+  * その他 &mdash; [npm インストーラ][npm] もしくは [ソースコードからビルド][build]
 
 [mac]: http://install.elm-lang.org/Elm-Platform-0.18.pkg
 [win]: http://install.elm-lang.org/Elm-Platform-0.18.exe
 [npm]: https://www.npmjs.com/package/elm
 [build]: https://github.com/elm-lang/elm-platform
 
-After installing through any of those routes, you will have the following command line tools:
+これらのルートのいずれかによりインストールした後は、次のコマンドラインツールを使用できます:
 
-- [`elm-repl`](#elm-repl) &mdash; play with Elm expressions
-- [`elm-reactor`](#elm-reactor) &mdash; get a project going quickly
-- [`elm-make`](#elm-make) &mdash; compile Elm code directly
-- [`elm-package`](#elm-package) &mdash; download packages
+- [`elm-repl`](#elm-repl) &mdash; エルムの式で遊ぶ
+- [`elm-reactor`](#elm-reactor) &mdash; すばやくプロジェクトを始める
+- [`elm-make`](#elm-make) &mdash; Elmコードを直接コンパイルする
+- [`elm-package`](#elm-package) &mdash; パッケージをダウンロードする
 
-We will go over how they all work in more detail right after we get your editor set up!
+あなたがエディタをセットアップしたらすぐに、これらがどのように働くのか詳しく説明します!
 
-> **Troubleshooting:** The fastest way to learn *anything* is to talk with other people in the Elm community. We are friendly and happy to help! So if you get stuck during installation or encounter something weird, visit [the Elm Slack](http://elmlang.herokuapp.com/) and ask about it. In fact, if you run into something confusing at any point while learning or using Elm, come ask us about it. You can save yourself hours. Just do it!
+> **トラブルシュート:** 何かを学ぶ最も速い方法は、エルムのコミュニティの他の人と話すことです。 フレンドリーで喜んでお手伝いします！ だから、インストール中にはまったり、何か変わったことがあった場合は、[Elm Slack](http://elmlang.herokuapp.com/)にアクセスして質問してください。 実際に、エルムを学んだり、使用したりしているときに、何か混乱した場合は、私たちに聞いてみてください。 自分で時間を節約することができます。 早く聞いて！
 
+## エディタの設定
 
-## Configure Your Editor
-
-Using Elm is way nicer when you have a code editor to help you out. There are Elm plugins for at least the following editors:
+あなたを助けるコードエディタを持っていると、Elmを使う事はより容易でしょう。 少なくとも以下のエディタ用のElmプラグインがあります:
 
   * [Atom](https://atom.io/packages/language-elm)
   * [Brackets](https://github.com/lepinay/elm-brackets)
@@ -39,21 +37,20 @@ Using Elm is way nicer when you have a code editor to help you out. There are El
   * [Vim](https://github.com/ElmCast/elm-vim)
   * [VS Code](https://github.com/sbrink/vscode-elm)
 
-If you do not have an editor at all, [Sublime Text](https://www.sublimetext.com/) is a great one to get started with!
+エディタを持っていない場合は、[Sublime Text](https://www.sublimetext.com/)を使い始めるのがいいです！
 
-You may also want to try out [elm-format][] which makes your code pretty!
+あなたのコードをきれいにする[elm-format] []を試してみてください！
 
 [elm-format]: https://github.com/avh4/elm-format
 
 
-## The Command Line Tools
+## コマンドラインツール
 
-So we installed Elm, and it gave us `elm-repl`, `elm-reactor`, `elm-make`, and `elm-package`. But what do they all do exactly?
-
+Elmをインストールして、`elm-repl`、`elm-reactor`、`elm-make`、`elm-package`を得ました。 しかし、それらは正確には何をしているのでしょうか?
 
 ### elm-repl
 
-[`elm-repl`](https://github.com/elm-lang/elm-repl) lets you play with simple Elm expressions.
+[`elm-repl`](https://github.com/elm-lang/elm-repl)では、簡単なElm式で遊ぶことができます。
 
 ```bash
 $ elm-repl
@@ -70,14 +67,14 @@ $ elm-repl
 $
 ```
 
-We will be using `elm-repl` in the upcoming &ldquo;Core Language&rdquo; section, and you can read more about how it works [here](https://github.com/elm-lang/elm-repl/blob/master/README.md).
+この後に続く &ldquo;Core Language&rdquo; で`elm-repl`を使用します。 これがどのように動作するかについての詳細は、こちらをご覧ください(https://github.com/elm-lang/elm-repl/blob/master/README.md)。
 
-> **Note:** `elm-repl` works by compiling code to JavaScript, so make sure you have [Node.js](http://nodejs.org/) installed. We use that to evaluate code.
+> **情報:** `elm-repl`はコードをJavaScriptにコンパイルすることで動作しますので、[Node.js](http://nodejs.org/)がインストールされていることを確認してください。 これを使用してコードを評価します。
 
 
 ### elm-reactor
 
-[`elm-reactor`](https://github.com/elm-lang/elm-reactor) helps you build Elm projects without messing with the command-line too much. You just run it at the root of your project, like this:
+[`elm-reactor`](https://github.com/elm-lang/elm-reactor)は、コマンドラインを駆使することなくElmプロジェクトを構築するのに役立ちます。 プロジェクトのルートで次のように実行するだけです:
 
 ```bash
 git clone https://github.com/evancz/elm-architecture-tutorial.git
@@ -85,37 +82,37 @@ cd elm-architecture-tutorial
 elm-reactor
 ```
 
-This starts a server at [`http://localhost:8000`](http://localhost:8000). You can navigate to any Elm file and see what it looks like. Try to check out `examples/01-button.elm`.
+これは[`http://localhost:8000`](http://localhost:8000)でサーバを起動します。 任意のElmファイルに移動して、それがどのように見えるかを見ることができます。 `examples/01-button.elm`をチェックしてみてください。
 
-**Notable flags:**
+**知っておいた方が良い実行オプション:**
 
-- `--port` lets you pick something besides port 8000. So you can say
-  `elm-reactor --port=8123` to get things to run at `http://localhost:8123`.
-- `--address` lets you replace `localhost` with some other address. For
-  example, you may want to use `elm-reactor --address=0.0.0.0` if you want to
-  try out an Elm program on a mobile device through your local network.
+- `--port`によりポート8000以外を選ぶことができます。したがって、
+  `http://localhost:8123`で動作させるために `elm-reactor --port=8123` と実行することができます。
+- `--address`は`localhost`を他のアドレスに置き換えることができます。
+  たとえば、ローカルネットワーク経由でモバイルデバイス上でElmプログラムを試したい場合は、
+  `elm-reactor -address=0.0.0.0`を使用することができます。
 
 
 ## elm-make
 
-[`elm-make`](https://github.com/elm-lang/elm-make) builds Elm projects. It can compile Elm code to HTML or JavaScript. It is the most general way to compile Elm code, so if your project becomes too advanced for `elm-reactor`, you will want to start using `elm-make` directly.
+[`elm-make`](https://github.com/elm-lang/elm-make)はElmプロジェクトをビルドします。 ElmコードをHTMLまたはJavaScriptにコンパイルできます。 Elmコードをコンパイルするもっとも一般的な方法です。もしあなたのプロジェクトが`elm-reactor`には進歩しすぎたならば、` elm-make`を直接使用したいと思うでしょう。
 
-Say you want to compile `Main.elm` to an HTML file named `main.html`. You would run this command:
+`main.elm`を` main.html`という名前のHTMLファイルにコンパイルしたいとします。 次のコマンドを実行します:
 
 ```bash
 elm-make Main.elm --output=main.html
 ```
 
-**Notable flags:**
+**知っておいた方が良い実行オプション:**
 
-- `--warn` prints warnings to improve code quality
+- `--warn`はコード品質を改善するための警告を表示します
 
 
 ### elm-package
 
-[`elm-package`](https://github.com/elm-lang/elm-package) downloads and publishes packages from our [package catalog](http://package.elm-lang.org/). As community members solve problems [in a nice way](http://package.elm-lang.org/help/design-guidelines), they share their code in the package catalog for anyone to use!
+[`elm-package`](https://github.com/elm-lang/elm-package)は、[パッケージカタログ](http://package.elm-lang.org/)からパッケージをダウンロードして公開します。 コミュニティメンバーが[上手い方法で](http://package.elm-lang.org/help/design-guidelines)問題を解決すると、誰もが使用できるように、パッケージカタログのコードを共有します!
 
-Say you want to use [`elm-lang/http`][http] and [`NoRedInk/elm-decode-pipeline`][pipe] to make HTTP requests to a server and turn the resulting JSON into Elm values. You would say:
+[`elm-lang/http`][http]と[`NoRedInk/elm-decode-pipeline`][pipe]を使ってHTTPリクエストをサーバーに送り、結果のJSONをElm値に変換したいとします。 その時はこうなります:
 
 [http]: http://package.elm-lang.org/packages/elm-lang/http/latest
 [pipe]: http://package.elm-lang.org/packages/NoRedInk/elm-decode-pipeline/latest
@@ -125,12 +122,12 @@ elm-package install elm-lang/http
 elm-package install NoRedInk/elm-decode-pipeline
 ```
 
-This will add the dependencies to your `elm-package.json` file that describes your project. (Or create it if you do not have one yet!) More information about all this [here](https://github.com/elm-lang/elm-package)!
+これにより、あなたのプロジェクトを記述する `elm-package.json`ファイルに依存関係が追加されます。（またはまだ作成していない場合は作成してください！）詳細情報は[こちら](https://github.com/elm-lang/elm-package)
 
 
-**Notable commands:**
+**知っておいた方が良いコマンド:**
 
-- `install`: install the dependencies in `elm-package.json`
-- `publish`: publish your library to the Elm Package Catalog
-- `bump`: bump version numbers based on API changes
-- `diff`: get the difference between two APIs
+- `install`: `elm-package.json` に記述された依存パッケージをインストール
+- `publish`: ライブラリをElmパッケージカタログに公開する
+- `dump` : APIの変更に基づいてバージョン番号をバンプする
+- `diff`: 2つのAPIの違いを得る
