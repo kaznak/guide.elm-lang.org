@@ -1,6 +1,6 @@
 This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
 
-> **情報:** まだインストールしたくない場合は、このガイドの[オンラインエディタ](http://elm-lang.org/try)と[オンラインREPL](http://elmrepl.cuberoot.in/)を参照してください。
+> **情報:** まだインストールしたくない場合は、リンク先のガイドの[オンラインエディタ](http://elm-lang.org/try)と[オンラインREPL](http://elmrepl.cuberoot.in/)を参照してください。
 
 # インストール
 
