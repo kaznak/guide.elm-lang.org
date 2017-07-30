@@ -1,10 +1,10 @@
 This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
 
-# Core Language
+# コア言語
 
-This section will walk you through Elm's simple core language.
+このセクションでは、エルムの簡単な言語のコアについて一通り説明します。
 
-This works best when you follow along, so after [installing](install.md), start up `elm-repl` in the terminal. (Or use the [online REPL](http://elmrepl.cuberoot.in/).) Either way, you should see something like this:
+このセクションはあなたが一緒に操作をするときに最も効果を発揮するので、[インストール](install.md)のあとに、ターミナルで `elm-repl`を起動してください。(または、[オンラインREPL](http://elmrepl.cuberoot.in/)を使用してください。)いずれの場合にしても、以下のような出力を得るでしょう:
 
 ```elm
 ---- elm repl 0.18.0 -----------------------------------------------------------
@@ -13,14 +13,14 @@ This works best when you follow along, so after [installing](install.md), start 
 >
 ```
 
-The REPL prints out the type of every result, but **we will leave the type annotations off in this tutorial** for the sake of introducing concepts gradually.
+REPLはすべての結果の型を出力しますが、概念を徐々に導入するために、**このチュートリアルでは型注釈をオフにします。
 
-We will cover [values](#values), [functions](#functions), [lists](#lists), [tuples](#tuples), and [records](#records). These building blocks all correspond pretty closely with structures in languages like JavaScript, Python, and Java.
+[値](#values)、[関数](#functions)、[リスト](#lists)、[タプル](#tuples)、および[レコード](#records)について説明します。 これらのビルディングブロックはすべて、JavaScript、Python、Javaなどの言語の構造と非常に密接に対応しています。
 
 
-## Values
+## 値
 
-Let's get started with some strings:
+まずはいくつかの文字列から始めましょう:
 
 ```elm
 > "hello"
@@ -33,9 +33,9 @@ Let's get started with some strings:
 "hello world"
 ```
 
-Elm uses the `(++)` operator to put strings together. Notice that both strings are preserved exactly as is when they are put together so when we combine `"hello"` and `"world"` the result has no spaces.
+Elmは `(++)`演算子を使って文字列をくっつけます。 両方の文字列が正確に保存されることに留意してください。そのため、`"hello"` と `"world"` を組み合わせた場合、その結果にはスペースが含まれません。
 
-Math looks normal too:
+数学も通常通りに見えます:
 
 ```elm
 > 2 + 3 * 4
@@ -45,7 +45,7 @@ Math looks normal too:
 20
 ```
 
-Unlike JavaScript, Elm makes a distinction between integers and floating point numbers. Just like Python 3, there is both floating point division `(/)` and integer division `(//)`.
+JavaScriptと異なり、Elmは整数と浮動小数点数を区別します。 Python 3と同様に、浮動小数点の `(/)`と整数の除算`(//)`の両方があります。
 
 ```elm
 > 9 / 2
@@ -55,9 +55,9 @@ Unlike JavaScript, Elm makes a distinction between integers and floating point n
 4
 ```
 
-## Functions
+## 関数
 
-Let's start by writing a function `isNegative` that takes in some number and checks if it is less than zero. The result will be `True` or `False`.
+まず関数`isNegative`を書く所から始めましょう。これは数値を取込み、それがゼロより小さいかをチェックする関数です。結果は、`True`か`False`になります。
 
 ```elm
 > isNegative n = n < 0
@@ -73,14 +73,14 @@ True
 False
 ```
 
-Notice that function application looks different than in languages like JavaScript and Python and Java. Instead of wrapping all arguments in parentheses and separating them with commas, we use spaces to apply the function. So `(add(3,4))` becomes `(add 3 4)` which ends up avoiding a bunch of parens and commas as things get bigger. Ultimately, this looks much cleaner once you get used to it! [The elm-html package][elm-html] is a good example of how this keeps things feeling light.
+関数適用は、JavaScriptやPython、Javaなどの言語とは異なった見た目であることに注意してください。 すべての引数をカッコで囲み、カンマで区切る代わりに、関数を適用するためにスペースを使用します。 だから `（add（3,4））`は `（add 3 4）`になり、物事が大きくなるにつれて括弧やカンマの束を避けることになります。 最終的に、これに慣れれば、はるかに綺麗にに見えます！ [elm-htmlパッケージ][elm-html]はこのやり方が物事の見通しをよくするかの良い例です。
 
 [elm-html]: http://elm-lang.org/blog/blazing-fast-html
 
 
-## If Expressions
+## If 式
 
-When you want to have conditional behavior in Elm, you use an if-expression.
+Elmで条件付きの振る舞いを書きたいときは、if式を使います。
 
 ```elm
 > if True then "hello" else "world"
@@ -90,11 +90,11 @@ When you want to have conditional behavior in Elm, you use an if-expression.
 "world"
 ```
 
-The keywords `if` `then` `else` are used to separate the conditional and the two branches so we do not need any parentheses or curly braces.
+キーワード `if` `then` `else` は条件と二つの分岐を区切るために使用されるので、括弧や中括弧は必要ありません。
 
-Elm does not have a notion of &ldquo;truthiness&rdquo; so numbers and strings and lists cannot be used as boolean values. If we try it out, Elm will tell us that we need to work with a real boolean value.
+エルムは &ldquo;truthiness&rdquo; の記法を持っていません。 したがって、数字と文字列とリストはブール値として使用できません。 試してみると、(数値や文字列ではない)本当のブール値で記述する必要があることがわかります。
 
-Now let's make a function that tells us if a number is over 9000.
+それでは、数値が9000より大きいかどうかを教えてくれる関数を作ってみましょう。
 
 ```elm
 > over9000 powerLevel = \
@@ -108,16 +108,16 @@ Now let's make a function that tells us if a number is over 9000.
 "It's over 9000!!!"
 ```
 
-Using a backslash in the REPL lets us split things on to multiple lines. We use this in the definition of `over9000` above. Furthermore, it is best practice to always bring the body of a function down a line. It makes things a lot more uniform and easy to read, so you want to do this with all the functions and values you define in normal code.
+REPLでバックスラッシュを使うと、プログラムを複数の行に分割することができます。 上記の `over9000` の定義でこれを使用しています。 さらに、関数の本体を常に行の下に持っていくことがベストプラクティスです。 これはプログラムをより統一して読みやすくするため、通常のコードで定義する関数と値は全てこのようにしたいと思うでしょう。
 
-> **Note:** Make sure that you add a whitespace before the second line of the function. Elm has a "syntactically significant whitespace" meaning that indentation is a part of its syntax.
+> **注意:** 関数の2行目の前に空白を追加するようにしてください。 Elmには"構文的に意味を持つ空白"があります。 これはインデントがその構文の一部であることを意味します。
 
 
-## Lists
+## リスト
 
-Lists are one of the most common data structures in Elm. They hold a sequence of related things, similar to arrays in JavaScript.
+リストは、Elmの最も一般的なデータ構造の1つです。 それらは、JavaScriptの配列と同様に、一連の関連するものを保持します。
 
-Lists can hold many values. Those values must all have the same type. Here are a few examples that use functions from [the `List` library][list]:
+リストは多くの値を保持できます。 これらの値はすべて同じ型でなければなりません。 [`List`ライブラリ][list]の関数を使用するいくつかの例を以下に示します:
 
 [list]: http://package.elm-lang.org/packages/elm-lang/core/latest/List
 
@@ -147,12 +147,12 @@ False
 [2,8,6,4]
 ```
 
-Again, all elements of the list must have the same type.
+繰り返しになりますが、リストのすべての要素は同じ型でなければなりません。
 
 
-## Tuples
+## タプル
 
-Tuples are another useful data structure. A tuple can hold a fixed number of values, and each value can have any type. A common use is if you need to return more than one value from a function. The following function gets a name and gives a message for the user:
+タプルは、また別の便利なデータ構造です。 タプルは決まった数の値を保持でき、各値は任意の型を持つことができます。 一般的な使い方は、関数から複数の値を返す必要がある場合です。 次の関数は名前を取得し、ユーザーにメッセージを出します:
 
 ```elm
 > import String
@@ -167,12 +167,12 @@ Tuples are another useful data structure. A tuple can hold a fixed number of val
 (True, "name accepted!")
 ```
 
-This can be quite handy, but when things start becoming more complicated, it is often best to use records instead of tuples.
+これは非常に便利ですが、状況が複雑になり始めるときには、タプルの代わりにレコードを使用するのが最善の方法です。
 
 
-## Records
+## レコード
 
-A record is a set of key-value pairs, similar to objects in JavaScript or Python. You will find that they are extremely common and useful in Elm! Let's see some basic examples.
+レコードは、JavaScriptまたはPythonのオブジェクトに似た、キーと値のペアのセットです。 彼らはElmで非常に一般的で有用であることがわかります！ いくつかの基本的な例を見てみましょう。
 
 
 ```elm
@@ -189,7 +189,7 @@ A record is a set of key-value pairs, similar to objects in JavaScript or Python
 "Gates"
 ```
 
-So we can create records using curly braces and access fields using a dot. Elm also has a version of record access that works like a function. By starting the variable with a dot, you are saying *please access the field with the following name*. This means that `.name` is a function that gets the `name` field of the record.
+このように、中括弧を使用してレコードを作成し、ドットを使用してフィールドにアクセスすることができます。 Elmには、関数のように使えるバージョンのレコードアクセスもあります。 変数をドットで始めると、*次の名前のフィールドにアクセスしてください*と言っていることになります。 つまり、 `.name`はレコードの`name`フィールドを取得する関数です。
 
 ```elm
 > .name bill
@@ -199,7 +199,7 @@ So we can create records using curly braces and access fields using a dot. Elm a
 ["Gates","Gates","Gates"]
 ```
 
-When it comes to making functions with records, you can do some pattern matching to make things a bit lighter.
+レコードを使って関数を作成する場合、パターンマッチングをつかうことで、プログラムを少し軽くすることができます。
 
 ```elm
 > under70 {age} = age < 70
@@ -212,9 +212,9 @@ True
 False
 ```
 
-So we can pass any record in as long as it has an `age` field that holds a number.
+したがって、数値を保持する`age`フィールドがある限り、レコードを渡すことができます。
 
-It is often useful to update the values in a record.
+レコードの値を更新すると便利なことがよくあります。
 
 ```elm
 > { bill | name = "Nye" }
@@ -224,19 +224,19 @@ It is often useful to update the values in a record.
 { age = 22, name = "Gates" }
 ```
 
-It is important to notice that we do not make *destructive* updates. When we update some fields of `bill` we actually create a new record rather than overwriting the existing one. Elm makes this efficient by sharing as much content as possible. If you update one of ten fields, the new record will share the nine unchanged values.
+我々は*破壊的な*更新をしないことに注意することが重要です。 `bill`のいくつかのフィールドを更新すると、既存のレコードを上書きするのではなく、実際に新しいレコードを作成します。 Elmは、可能な限り多くのコンテンツを共有することで、これを効率的にします。 10個のフィールドの1つを更新すると、新しいレコードは9個の変更されていない値を共有します。
 
 
-### Comparing Records and Objects
+### レコードとオブジェクトの比較
 
-Records in Elm are *similar* to objects in JavaScript, but there are some crucial differences. The major differences are that with records:
+ElmのレコードはJavaScriptのオブジェクトと*似ています*、が、いくつかの重要な違いがあります。 主な違いは、レコードとの違いです:
 
-- You cannot ask for a field that does not exist.
-- No field will ever be undefined or null.
-- You cannot create recursive records with a `this` or `self` keyword.
+- あなたは存在しないフィールドにアクセスすることはできません。
+- いかなるフィールドも未定義もしくはnullになりません。
+- `this`または`self`キーワードを使って再帰的レコードを作成することはできません。
 
-Elm encourages a strict separation of data and logic, and the ability to say `this` is primarily used to break this separation. This is a systemic problem in Object Oriented languages that Elm is purposely avoiding.
+Elmはデータとロジックの厳密な分離を奨励しておりますが、この分離を破るために主に使われるのが`this`と言う能力です。 これは、オブジェクト指向言語の体系的な問題で、Elmが意図的に避けているものです。
 
-Records also support [structural typing][st] which means records in Elm can be used in any situation as long as the necessary fields exist. This gives us flexibility without compromising reliability.
+レコードは、[構造的型づけ][st]もサポートしています。これは、Elmのレコードが、必要なフィールドが存在する限り、どのような状況でも使用できることを意味します。 これにより、信頼性を損なうことなく柔軟性が得られます。
 
  [st]: https://en.wikipedia.org/wiki/Structural_type_system "Structural Types"
