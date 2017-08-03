@@ -1,12 +1,13 @@
 This is Japanese translated version of commit 5e58bb7cad13f09ae1c8494566318106905364d9.
 
-# The Elm Architecture
+# Elm アーキテクチャ
 
-The Elm Architecture is a simple pattern for architecting webapps. It is great for modularity, code reuse, and testing. Ultimately, it makes it easy to create complex web apps that stay healthy as you refactor and add features.
+Elmアーキテクチャは、Webアプリケーションを設計するための単純なパターンです。 これは、モジュール性、コードの再利用、およびテストに最適です。  結局のところ、Elmアーキテクチャにより、リファクタリングや機能追加の際に健全性を保ったまま、複雑なWebアプリケーションを簡単に作成することができるようになります。
 
-This architecture seems to emerge naturally in Elm. We first observed it in the games the Elm community was making. Then in web apps like [TodoMVC][] and [dreamwriter][] too. Now we see it running in production at companies like [NoRedInk][] and [Pivotal][]. The architecture seems to be a consequence of the design of Elm itself, so it will happen to you whether you know about it or not. This has proven to be really nice for onboarding new developers. Their code just turns out well-architected. It is kind of spooky.
+このアーキテクチャはElmのなかで自然に成長してきたように思えます。 私たちはまず、Elmコミュニティが作っていたゲームにそれを見出しました。 それから[TodoMVC][]や[dreamwriter][]などのWebアプリケーションでも。 今では、[NoRedInk][]と[Pivotal][]のような企業の製品で見ることができます。 アーキテクチャはElm自体の設計の結果であるように思われるので、それを知っているかいないかに関わらず、あなたはそれを知る事になるでしょう。 
+このことは新しい開発者に参加してもらうときに非常によい事が分かっています。 彼らのコードは上手く設計されたものとなります。 これはとても不思議なことです。
 
-So The Elm Architecture is *easy* in Elm, but it is useful in any front-end project. In fact, projects like Redux have been inspired by The Elm Architecture, so you may have already seen derivatives of this pattern. Point is, even if you ultimately cannot use Elm at work yet, you will get a lot out of using Elm and internalizing this pattern.
+ElmアーキテクチャーはElmでは*簡単*ですが、どんなフロントエンドのプロジェクトでも便利です。 実際、ReduxのようなプロジェクトはElmアーキテクチャに触発されているので、すでにこのパターンの派生品を見ているかもしれません。 ポイントは、たとえあなたがまだ仕事でElmを使用できないとしても、あなたはElmを使うこと以外にもこのパターンを取込むことから多くを得るでしょう。
 
 [Elm]: http://elm-lang.org/
 [TodoMVC]: https://github.com/evancz/elm-todomvc
@@ -16,15 +17,15 @@ So The Elm Architecture is *easy* in Elm, but it is useful in any front-end proj
 [Pivotal]: https://www.pivotaltracker.com/blog/Elm-pivotal-tracker/
 
 
-## The Basic Pattern
+## 基本パターン
 
-The logic of every Elm program will break up into three cleanly separated parts:
+すべてのElmプログラムのロジックは、明確に切り分けられた3つの部分に分割されます。
 
-  * **Model** &mdash; the state of your application
-  * **Update** &mdash; a way to update your state
-  * **View** &mdash; a way to view your state as HTML
+  * **モデル** &mdash; アプリケーションの状態
+  * **アップデート** &mdash; 状態を更新する方法
+  * **ビュー** &mdash; 状態をHTMLとして表示する方法
 
-This pattern is so reliable that I always start with the following skeleton and fill in details for my particular case.
+このパターンはとても信頼性が高く、私はいつも次の骨格から始めて、個別の特別な場合の詳細を記入します。
 
 ```elm
 import Html exposing (..)
@@ -53,4 +54,4 @@ view model =
   ...
 ```
 
-That is really the essence of The Elm Architecture! We will proceed by filling in this skeleton with increasingly interesting logic.
+これは本当にElmアーキテクチャの本質です! 興味深いロジックで徐々にこのスケルトンを埋めて行く事で進めて行きます。
